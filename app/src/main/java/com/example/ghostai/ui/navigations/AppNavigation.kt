@@ -1,4 +1,8 @@
 package com.example.ghostai.ui.navigations
 
-class AppNavigation {
+import androidx.compose.runtime.Composable
+
+@Composable
+internal fun AppNavigation() {
+
 }
