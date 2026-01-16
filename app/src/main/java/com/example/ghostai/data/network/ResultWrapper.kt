@@ -5,6 +5,8 @@ import java.io.IOException
 sealed class ResultWrapper<out T> {
     data class Success<out T>(val value: T) : ResultWrapper<T>()
 
+    data class AppError(val error: String) : ResultWrapper<Nothing>()
+
     data class ApiError(val error: MutableList<Error>) : ResultWrapper<Nothing>()
 
     data class GenericError(
